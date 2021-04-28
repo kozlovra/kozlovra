@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Главная страница - Полёт</title>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <style>
+        .navbar a, .navbar-brand{
+            color:#2AACE3 !important;
+        }
+        .features-icons {
+           padding-top: 0;
+        }
+        .main-view{
+          margin-top: 0 !important;
+        }
+        .scale{
+          transform: scale(0.5) translateY(-50%);
+          max-height: 1100px;
+        }
+        .btn-primary{
+          color: #fff !important;
+          background-color: #007bff !important;
+          border-color: #007bff !important;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/plane.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="" height="50">Полёт</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"></button>
+            <div class="collapse navbar-collapse" id="navcol-1"><a class="link ml-auto" href="#">Главная страница</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="link" href="#">О компании</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="link" href="#">Рейсы</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="link " href="#">Контакты</a></div>
+        </div>
+    </nav>
+    <section class="text-center bg-light features-icons">
+        <div class="container">
+            <div class="row">
+                <div class="container" style="display: none;">
+                    <div class="row">
+                      <div class="col-xs-12 header-controls">
+                          <div class="form-group">
+                            <button id="btnSeatMap" class="btn btn-default"><span class="glyphicon glyphicon-plane"></span> Показать схему</button>
+                          </div>
+                          <div class="form-group">
+                            <button id="btnSetFull" class="btn btn-success"><span class="glyphicon glyphicon-plane"></span> Заполнить</button>
+                          </div>
+                          <div class="form-group">
+                            <button id="btnSetEmpty" class="btn btn-warning"><span class="glyphicon glyphicon-plane"></span> Очистить</button>
+                          </div>
+                        </form>
+                        <select class="form-control" name="ACSelect" id="acSelect" style="width: 10em">
+                          <option value="a319">A319 (150 пассажиров)</option>
+                          <option value="a320">A320 (180 пассажиров)</option>
+                          <option value="a320x">A320 (186 пассажиров)</option>
+                          <option value="a321">A321 (230 пассажиров)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                <div class="main-view container">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h1 id="seatMapTitle" class="text-center">Выберите место</h1>
+                    </div>
+                  </div>
+                  <div class="row scale">
+                    <div id="seatMapDiv" class="col-xs-12 seating-chart block-center">
+                      <h3 class='text-center'></h3>
+                    </div>
+                  </div>
+                  <a href="thanks.html" class="btn btn-primary">&nbsp;&nbsp;&nbsp;Оформить билет&nbsp;&nbsp;&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left my-auto h-100">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a href="#">О компании</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Контакты</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Сотрудничество</a></li>
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">© Полёт 2021. Все права защищены.</p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right my-auto h-100">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/plane.js"></script>
+</body>
+
+</html>

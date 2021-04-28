@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="airplane.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" style="display: none;">
+      <div class="row">
+        <div class="col-xs-12 header-controls">
+            <div class="form-group">
+              <button id="btnSeatMap" class="btn btn-default"><span class="glyphicon glyphicon-plane"></span> Показать схему</button>
+            </div>
+            <div class="form-group">
+              <button id="btnSetFull" class="btn btn-success"><span class="glyphicon glyphicon-plane"></span> Заполнить</button>
+            </div>
+            <div class="form-group">
+              <button id="btnSetEmpty" class="btn btn-warning"><span class="glyphicon glyphicon-plane"></span> Очистить</button>
+            </div>
+          </form>
+          <select class="form-control" name="ACSelect" id="acSelect" style="width: 10em">
+            <option value="a319">A319 (150 пассажиров)</option>
+            <option value="a320">A320 (180 пассажиров)</option>
+            <option value="a320x">A320 (186 пассажиров)</option>
+            <option value="a321">A321 (230 пассажиров)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  <div class="main-view container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 id="seatMapTitle" class="text-center">Выберите самолёт</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div id="seatMapDiv" class="col-xs-12 seating-chart block-center">
+        <h3 class='text-center'>Самолёт не выбран</h3>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
