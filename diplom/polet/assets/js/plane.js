@@ -1,57 +1,42 @@
 const selectPlane = document.getElementById('acSelect');
-const seatMapDiv = document.getElementById('seatMapDiv'); // здесь будет схема
-const titlePlane = document.getElementById('seatMapTitle'); // заголовок
+const seatMapDiv = document.getElementById('seatMapDiv'); 
+const titlePlane = document.getElementById('seatMapTitle'); 
 const btnFull = document.getElementById('btnSetFull');
-const btnMap = document.getElementById('btnSeatMap'); // отображаем схему
+const btnMap = document.getElementById('btnSeatMap'); 
 const btnEmpty = document.getElementById('btnSetEmpty');
 const totalPax = document.getElementById('totalPax');
 const totalAdult = document.getElementById('totalAdult');
 const totalHalf = document.getElementById('totalHalf');
 const planes = document.querySelectorAll('option');
-
 let countPax = 0;
 let countAdult = 0;
 let countHalf = 0;
-
-
 function el(tagName, attributes, children) {
-  const element = document.createElement(tagName); // создаю нужный тег
+  const element = document.createElement(tagName); 
   if (typeof attributes === 'object') {
-    // для ключей объекта добавляем атрибут с названием самого ключа и значением, равному значению ключа
     Object.keys(attributes).forEach(i => element.setAttribute(i, attributes[i]));
   }
-  // если переданный аргумент - строка
   if (typeof children === 'string') {
-    // добавляем её в тег
     element.textContent = children;
-    // если аргумент - массив
   } else if (children instanceof Array) {
-    // для каждого элемента массива добавляем его в качестве дочернего тега в вышесозданный тег
     children.forEach(child => element.appendChild(child));
   }
   return element;
 }
-
-// до выбора схемы, кнопки заблокированы
 document.addEventListener('DOMContentLoaded', () => {
   btnFull.disabled = true;
   btnEmpty.disabled = true;
 })
-
-
 btnFull.addEventListener('click', function(event) {
 event.preventDefault();
   const seats = document.querySelectorAll('div.seat');
-  
   Array.from(seats).forEach(seat => {
     deleteSeat(seat);
   });
-  
   Array.from(seats).forEach(seat => {
     addAdult(seat);
   });
 });
-
 btnEmpty.addEventListener('click', function(event) {
   event.preventDefault();
   const seats = document.querySelectorAll('div.seat');
@@ -59,31 +44,22 @@ btnEmpty.addEventListener('click', function(event) {
     deleteSeat(seat);
   });
 });
-
-
 function removeChildren(elem) {
   while (elem.lastChild) {
     elem.removeChild(elem.lastChild);
   }
 }
-
 window.addEventListener('load', parseScheme)
-
-// сначала парсим
 function parseScheme(event) {
   btnFull.disabled = false;
   btnEmpty.disabled = false;
-  
   event.preventDefault();
-  fetch(`https://neto-api.herokuapp.com/plane/${selectPlane.value}`).then((scheme) => {
+  fetch(`https:
     return scheme.json();
     seatMapTitle.textContent = `${scheme.title} (${scheme.passengers} пассажиров)`
   })
   .then(showScheme);
 }
-
-    
-// потом показываем    
 function showScheme(scheme) {    
     const fragment = scheme.scheme.reduce(
     (fragment, currentValue, index) => {
@@ -101,10 +77,8 @@ function showScheme(scheme) {
     }, 
     document.createDocumentFragment()
   );
- 
   removeChildren(seatMapDiv);
   seatMapDiv.appendChild(fragment);
-  
   const seats = document.querySelectorAll('div.seat');
   Array.from(seats).forEach(seat => {
       seat.addEventListener('click', function(event) {
@@ -116,8 +90,6 @@ function showScheme(scheme) {
       });
   });
 }
-
-
 function createRow(num, letters) {
   return el('div', {class: 'row seating-row text-center'}, [
     el('div', {class: 'col-xs-1 row-number'}, [
@@ -135,7 +107,6 @@ function createRow(num, letters) {
     ])    
   ]);
 }
-
 function getSeat(letters, needLetter) {
   if (letters.indexOf(needLetter) !== -1) {
     return el('div', {class: 'col-xs-4 seat'}, [
@@ -144,8 +115,6 @@ function getSeat(letters, needLetter) {
   }
   return el('div', {class: 'col-xs-4 no-seat'}, '');
 }
-
-
 function deleteSeat(seat) {
   if (seat.classList.contains('adult')) {
     seat.classList.remove('adult');
@@ -161,7 +130,6 @@ function deleteSeat(seat) {
       totalHalf.textContent = countHalf;
     }
 }
-
 function addAdult(seat) {
   seat.classList.add('adult');
   countPax++;
@@ -169,7 +137,6 @@ function addAdult(seat) {
   totalPax.textContent = countPax;
   totalAdult.textContent = countAdult;
 }
-
 function addHalf(seat) {
   seat.classList.add('half');
   countPax++;
