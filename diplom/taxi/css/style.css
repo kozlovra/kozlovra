@@ -223,10 +223,16 @@
 }
 
 #comments input,
-#comments textarea {
+#comments textarea,
+#comments select {
 	width: 100%;
 	padding: 10px;
-	border: 1px solid
+	border: 1px solid;
+	border-color: #d7d7d7
+}
+
+#comments select:focus{
+	border-color: #f7a804
 }
 
 #comments textarea {
@@ -824,7 +830,7 @@ td {
 
 .faico a {
 	color: #fff;
-	background-color: #0e74a5
+	background-color: #474747
 }
 
 .faicon-dribble:hover {
@@ -918,13 +924,13 @@ textarea:focus,
 }
 
 .logoname span {
-	color: #0e74a5
+	color: #474747
 }
 
 .row0,
 .row0 a {
 	color: #fff;
-	background-color: #0e74a5
+	background-color: #474747
 }
 
 .row1 {
@@ -959,7 +965,7 @@ textarea:focus,
 
 .gradient {
 	color: #fff;
-	background: linear-gradient(to bottom right, #0e74a5, #4fb5f5)
+	background: linear-gradient(to bottom right, #171717, #212121)
 }
 
 #topbar ul li {
@@ -1028,12 +1034,15 @@ textarea:focus,
 
 #cta ul li {
 	color: #474747;
-	background-color: #fff
 }
 
 #cta ul li div i {
 	color: #4fb5f5;
-	border-color: rgba(0, 0, 0, .1)
+	border-color: #4fb5f5;
+}
+
+#cta ul li div span{
+	color: #fff;
 }
 
 #footer .heading {
@@ -1053,7 +1062,7 @@ textarea:focus,
 
 #footer input {
 	color: #fff;
-	background-color: #0e74a5
+	background-color: #474747
 }
 
 #footer input:focus {
@@ -1077,7 +1086,7 @@ textarea:focus,
 #mainav .active a,
 #mainav a:hover,
 #mainav li:hover>a {
-	color: #0e74a5;
+	color: #474747;
 	background-color: inherit
 }
 
@@ -1090,7 +1099,7 @@ textarea:focus,
 
 #mainav li li:hover>a,
 #mainav .active .active>a {
-	color: #0e74a5;
+	color: #474747;
 	background-color: #f7a804
 }
 
