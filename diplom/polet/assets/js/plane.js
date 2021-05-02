@@ -54,7 +54,8 @@ function parseScheme(event) {
   btnFull.disabled = false;
   btnEmpty.disabled = false;
   event.preventDefault();
-  fetch(`https:
+  event.preventDefault();
+  fetch(`https://neto-api.herokuapp.com/plane/${selectPlane.value}`).then((scheme) => {
     return scheme.json();
     seatMapTitle.textContent = `${scheme.title} (${scheme.passengers} пассажиров)`
   })
