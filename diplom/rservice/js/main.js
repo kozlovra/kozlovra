@@ -207,3 +207,192 @@
 
 })(jQuery);
 
+const selectElement = document.querySelector('#name-auto');
+const targetElement = document.querySelector('#model-auto');
+const audi =
+[
+  {
+    "text"  : "A3",
+    "value" : "a3"
+  },
+	{
+    "text"  : "A4",
+    "value" : "a4"
+  },
+	{
+    "text"  : "A5",
+    "value" : "a5"
+  },
+	{
+    "text"  : "A6",
+    "value" : "a6"
+  },
+	{
+    "text"  : "S6",
+    "value" : "s6"
+  },
+	{
+    "text"  : "A7",
+    "value" : "a7"
+  },
+	{
+    "text"  : "S7",
+    "value" : "s7"
+  },
+	{
+    "text"  : "RS7",
+    "value" : "RS7"
+  },
+	{
+    "text"  : "Нет в списке",
+    "value" : "none"
+  }
+];
+const vw =
+[
+  {
+    "text"  : "Polo",
+    "value" : "polo"
+  },
+	{
+    "text"  : "Tiguan",
+    "value" : "tiguan"
+  },
+	{
+    "text"  : "Passat ",
+    "value" : "passat"
+  },
+	{
+    "text"  : "Taureg ",
+    "value" : "taureg"
+  },
+	{
+    "text"  : "Jetta ",
+    "value" : "jetta"
+  },
+	{
+    "text"  : "Нет в списке",
+    "value" : "none"
+  }
+];
+const bmw =
+[
+	{
+    "text"  : "2 серия",
+    "value" : "2s"
+  },
+	{
+    "text"  : "3 серия ",
+    "value" : "3s"
+  },
+	{
+    "text"  : "4 серия ",
+    "value" : "4s"
+  },
+	{
+    "text"  : "5 серия ",
+    "value" : "5s"
+  },
+	{
+    "text"  : "6 серия ",
+    "value" : "6s"
+  },
+	{
+    "text"  : "7 серия ",
+    "value" : "7s"
+  },
+	{
+    "text"  : "8 серия ",
+    "value" : "8s"
+  },
+	{
+    "text"  : "X серия ",
+    "value" : "x"
+  },
+	{
+    "text"  : "Z серия ",
+    "value" : "z"
+  },
+	{
+    "text"  : "M серия ",
+    "value" : "m"
+  },
+	{
+    "text"  : "Нет в списке",
+    "value" : "none"
+  }
+];
+const mercedess =
+[
+  {
+    "text"  : "А-класс",
+    "value" : "a"
+  },
+	{
+    "text"  : "B-класс",
+    "value" : "b"
+  },
+	{
+    "text"  : "C-класс ",
+    "value" : "c"
+  },
+	{
+    "text"  : "S-класс ",
+    "value" : "s"
+  },
+	{
+    "text"  : "AMG ",
+    "value" : "amg"
+  },
+	{
+    "text"  : "GLE ",
+    "value" : "gle"
+  },
+	{
+    "text"  : "CLS ",
+    "value" : "cls"
+  },
+	{
+    "text"  : "Нет в списке",
+    "value" : "none"
+  }
+];
+const none =
+[
+  {
+    "text"  : "Нет в списке",
+    "value" : "none"
+  }
+];
+
+selectElement.addEventListener('change', (event) => {
+	targetElement.innerHTML = "";
+  if (event.target.value == 'vw') {
+		var changetElement = vw;
+  }
+	if (event.target.value == 'audi') {
+		var changetElement = audi;
+  }
+	if (event.target.value == 'bmw') {
+		var changetElement = bmw;
+  }
+	if (event.target.value == 'mercedess') {
+		var changetElement = mercedess;
+  }
+	if (event.target.value == 'none') {
+		var changetElement = none;
+  }
+	for(var i = 0, l = changetElement.length; i < l; i++){
+		var option = changetElement[i];
+		targetElement.options.add( new Option(option.text, option.value, option.selected) );
+	}
+});
+
+
+window.addEventListener( "load", function () {
+  const form = document.getElementById( "frm-smb" );
+  form.addEventListener( "submit", function ( event ) {
+      event.preventDefault();
+      document.location = "thanks.html";
+  } );
+} );
