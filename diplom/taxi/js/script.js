@@ -10,10 +10,9 @@ selectElement.addEventListener('change', (event) => {
   }
 });
 
-window.addEventListener( "load", function () {
+
   const form = document.getElementById( "order-form" );
   form.addEventListener( "submit", function ( event ) {
       event.preventDefault();
-      document.location = "thanks.html";
+      document.location = "order-completed.html";
   } );
-} );

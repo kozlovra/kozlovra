@@ -1313,3 +1313,6 @@ table a,
 		font-size: 1.6rem
 	}
 }
+.upeffect:hover{
+	transform: scale(1.1);
+}
