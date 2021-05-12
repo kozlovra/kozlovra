@@ -156,9 +156,6 @@
             timepicker:false,
             format:'d.m.Y',
         });
-
-        // // Nice Select
-        $('select').niceSelect();
         
 
         // Google Map
@@ -378,3 +375,10 @@
 		$('.preloader').fadeOut(500);
     });
 })(jQuery);
+
+
+const form = document.getElementById( "doctor" );
+form.addEventListener( "submit", function ( event ) {
+    event.preventDefault();
+    document.location = "done.html";
+} );
