@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+a{
+  color: #00A0FB;
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  background-image: url("../img/hero-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.hero .row{
+  align-items: center;
+}
+
+.logorow{
+  padding-top: 25px;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.logo{
+  font-size: 2rem;
+}
+
+.logo span{
+  color: #FF7F50;
+}
+
+.hero ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero ul li{
+  display: inline-block;
+  padding-left: 25px;
+}
+
+.thecenters{
+  height: calc(100vh - 150px);
+  justify-content: center;
+}
+form{
+  width: 100%;
+  text-align: center;
+}
+.search{
+  font-size: 1rem;
+  color: #B8B4B4;
+  background: #FFFFFF;
+  width: 40%;
+  border: 0.5px solid rgba(71, 71, 71, 0.8);
+  border-right: none;
+  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 10px;
+  background-image: url("../img/search.svg");
+  background-size: 30px;
+  padding-right: 20px;
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+}
+.search::placeholder{
+  color: #B8B4B4;
+}
+.search:active, .search:focus{
+  outline: none;
+  border: 0.5px solid #FF7F50;
+  border-right: none;
+}
+
+input[type="submit"]{
+  color:#fff;
+  font-size: 1rem;
+  background: #FF7F50;
+  border: 1px solid rgba(71, 71, 71, 0.8);
+  border-left: none;
+  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: #e05f2f;
+}
+
+.applinks img{
+  padding-left: 20px;
+}
+
+.upper{
+  font-size: 1.6rem;
+}
+
+.card{
+  margin: 10px;
+  border: 1px solid #C9C8C8;
+  border-radius: 6px;
+  border-left: 6px solid #C9C8C8;
+  padding: 10px;
+}
+
+.card p{
+  padding-bottom: 30px;
+}
+
+.content{
+  padding: 50px;
+}
+.content .row{
+  justify-content: center;
+}
+.content h1{
+  padding-left: 145px;
+}
+
+.content li{
+  margin-bottom: 20px;
+}
+
+.backfooter{
+  background-color: #ECECEC;
+  padding: 50px;
+}
+
+.backfooter .row{
+  justify-content: center;
+}
+
+.footerblack{
+  background-color: #363636;
+  color: #fff;
+  border-top: 2px solid #e05f2f;
+}
