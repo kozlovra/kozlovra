@@ -76,8 +76,40 @@ form{
   background-position-x: right;
   background-position-y: center;
   background-repeat: no-repeat;
-
 }
+.input{
+  font-size: 1rem;
+  color: #000;
+  background: #FFFFFF;
+  width: 40%;
+  border: 0.5px solid rgba(71, 71, 71, 0.8);
+  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 10px;
+  padding-right: 20px;
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  margin-bottom: 25px;
+}
+.input:active, .input:focus{
+  outline: none;
+  border: 0.5px solid #FF7F50;
+}
+
+tr{
+  text-align: center;
+}
+
+form{
+  width: 100%;
+}
+
+label{
+  display: block;
+  color: #B8B4B4;
+}
+
 .search::placeholder{
   color: #B8B4B4;
 }
@@ -151,4 +183,8 @@ input[type="submit"]:hover{
   background-color: #363636;
   color: #fff;
   border-top: 2px solid #e05f2f;
+}
+
+.logorow a{
+  color: #fff;
 }
